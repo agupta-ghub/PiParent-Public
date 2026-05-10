@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiParent | Support</title>
+    <title>PiParent | Support & Privacy</title>
     <style>
         :root {
             --bg: #0A0A0F;
@@ -20,21 +20,33 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
         .container {
-            max-width: 500px;
+            max-width: 600px;
+            width: 100%;
             background: var(--card);
             padding: 40px;
             border-radius: 24px;
             border: 1px solid #2C2C3E;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+            margin-bottom: 30px;
         }
-        h1 { font-size: 28px; margin-bottom: 8px; letter-spacing: -0.5px; }
-        p { color: var(--muted); font-size: 16px; line-height: 1.5; margin-bottom: 30px; }
+        .policy-container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid #2C2C3E;
+            text-align: left;
+        }
+        h1 { font-size: 28px; margin-bottom: 8px; letter-spacing: -0.5px; text-align: center;}
+        h2 { font-size: 20px; color: #fff; margin-top: 30px; border-bottom: 1px solid #2C2C3E; padding-bottom: 10px;}
+        p { color: var(--muted); font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
         .btn {
             display: inline-block;
             background: var(--accent);
@@ -45,14 +57,17 @@
             font-weight: 600;
             font-size: 16px;
             transition: opacity 0.2s;
+            margin-top: 10px;
         }
         .btn:hover { opacity: 0.9; }
-        .footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
+        .footer { margin-top: 20px; text-align: center; font-size: 13px; color: var(--muted); }
         .footer a { color: var(--accent); text-decoration: none; }
+        ul { color: var(--muted); font-size: 15px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
+    <!-- Support Section -->
     <div class="container">
         <h1>PiParent Support</h1>
         <p>Need help with your family controls, or discovered a bug? Please open a support ticket on our official repository or reach out via email.</p>
@@ -62,6 +77,27 @@
         <div style="margin-top: 24px;">
             <a href="mailto:deejay.gators_5c@icloud.com" style="color: var(--muted); font-size: 14px;">Contact Support via Email</a>
         </div>
+    </div>
+
+    <!-- Privacy Policy Section -->
+    <div class="policy-container" id="privacy">
+        <h1>Privacy Policy</h1>
+        <p style="text-align:center; margin-bottom:40px;">Effective Date: May 10, 2026</p>
+
+        <h2>1. Zero Data Collection Promise</h2>
+        <p>PiParent operates under a strict Zero-Data architecture. We do not collect, transmit, store, or monetize any of your personal information, browsing history, network query logs, or device usage metrics.</p>
+
+        <h2>2. Local Orchestration Only</h2>
+        <p>All operations conducted by the application occur exclusively between the device running the application and your own self-hosted Pi-hole instance via your local intranet. No data passes through any 3rd-party intermediary servers controlled by us.</p>
+
+        <h2>3. Third Party Services</h2>
+        <p>To facilitate in-app subscription verification, PiParent utilizes <strong>RevenueCat</strong> and **Apple App Store** standard payment services. These services are only provided access to transactional identifiers for subscription activation and do not possess access to any metrics or family network configuration generated within the app.</p>
+
+        <h2>4. Local Security & Keychain</h2>
+        <p>Any credentials required to interface with your Pi-hole instance (such as password tokens) are stored exclusively on your local device using Apple’s native, hardware-encrypted iOS Keychain framework.</p>
+
+        <h2>5. Contact Information</h2>
+        <p>If you have questions concerning this policy, please contact us directly at: <strong>deejay.gators_5c@icloud.com</strong></p>
     </div>
 
     <div class="footer">
